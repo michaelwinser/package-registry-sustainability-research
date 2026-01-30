@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package Registry Sustainability Crisis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+  <div class="max-w-7xl mx-auto p-8">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-bold gradient-text mb-4">Package Registry Sustainability Crisis</h1>
+      <p class="text-slate-400 text-xl max-w-3xl mx-auto">
+        Exponential growth meets flat resources: The widening gap between ecosystem demands and infrastructure capacity
+      </p>
+    </div>
+
+    <!-- Key Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-4xl font-bold text-blue-400">6.6T</div>
+        <div class="text-slate-400">Downloads (2024)</div>
+        <div class="text-xs text-green-400 mt-1">Record breaking year</div>
+      </div>
+      <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-4xl font-bold text-purple-400">778K+</div>
+        <div class="text-slate-400">Malicious Packages</div>
+        <div class="text-xs text-red-400 mt-1">156% YoY increase</div>
+      </div>
+      <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-4xl font-bold text-green-400">~10</div>
+        <div class="text-slate-400">FT Staff Combined</div>
+        <div class="text-xs text-amber-400 mt-1">PyPI + RubyGems + crates</div>
+      </div>
+      <div class="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-4xl font-bold text-amber-400">$1M+</div>
+        <div class="text-slate-400">Donated CDN/mo</div>
+        <div class="text-xs text-slate-400 mt-1">If paid at retail</div>
+      </div>
+    </div>
+
+    <!-- Section 1: The Scissors Effect -->
+    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-red-400">✂️ The Scissors Effect</h2>
+      <p class="text-slate-400 mb-6">Downloads and security expectations grow exponentially while staffing remains nearly flat (2019 = 100 baseline)</p>
+      
+      <svg viewBox="0 0 800 400" class="w-full h-auto">
+        <!-- Grid -->
+        <defs>
+          <pattern id="grid" width="80" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect x="80" y="20" width="680" height="320" fill="url(#grid)"/>
+        
+        <!-- Y-axis labels -->
+        <text x="70" y="25" fill="#94a3b8" font-size="12" text-anchor="end">1400%</text>
+        <text x="70" y="105" fill="#94a3b8" font-size="12" text-anchor="end">1000%</text>
+        <text x="70" y="185" fill="#94a3b8" font-size="12" text-anchor="end">600%</text>
+        <text x="70" y="265" fill="#94a3b8" font-size="12" text-anchor="end">200%</text>
+        <text x="70" y="340" fill="#94a3b8" font-size="12" text-anchor="end">100%</text>
+        
+        <!-- X-axis labels -->
+        <text x="80" y="360" fill="#94a3b8" font-size="12">2019</text>
+        <text x="193" y="360" fill="#94a3b8" font-size="12">2020</text>
+        <text x="307" y="360" fill="#94a3b8" font-size="12">2021</text>
+        <text x="420" y="360" fill="#94a3b8" font-size="12">2022</text>
+        <text x="533" y="360" fill="#94a3b8" font-size="12">2023</text>
+        <text x="647" y="360" fill="#94a3b8" font-size="12">2024</text>
+        <text x="760" y="360" fill="#94a3b8" font-size="12">2025</text>
+        
+        <!-- Download Volume Line (Red) - from 100 to 1250 -->
+        <polyline fill="none" stroke="#EF4444" stroke-width="4"
+          points="80,317 193,283 307,226 420,180 533,123 647,66 760,43"/>
+        <circle cx="80" cy="317" r="6" fill="#EF4444"/>
+        <circle cx="193" cy="283" r="6" fill="#EF4444"/>
+        <circle cx="307" cy="226" r="6" fill="#EF4444"/>
+        <circle cx="420" cy="180" r="6" fill="#EF4444"/>
+        <circle cx="533" cy="123" r="6" fill="#EF4444"/>
+        <circle cx="647" cy="66" r="6" fill="#EF4444"/>
+        <circle cx="760" cy="43" r="6" fill="#EF4444"/>
+        
+        <!-- Security Expectations Line (Amber) - from 100 to 700 -->
+        <polyline fill="none" stroke="#F59E0B" stroke-width="4"
+          points="80,317 193,294 307,260 420,215 533,158 647,101 760,66"/>
+        <circle cx="80" cy="317" r="6" fill="#F59E0B"/>
+        <circle cx="193" cy="294" r="6" fill="#F59E0B"/>
+        <circle cx="307" cy="260" r="6" fill="#F59E0B"/>
+        <circle cx="420" cy="215" r="6" fill="#F59E0B"/>
+        <circle cx="533" cy="158" r="6" fill="#F59E0B"/>
+        <circle cx="647" cy="101" r="6" fill="#F59E0B"/>
+        <circle cx="760" cy="66" r="6" fill="#F59E0B"/>
+        
+        <!-- Staffing Line (Green) - from 100 to 145 -->
+        <polyline fill="none" stroke="#10B981" stroke-width="4"
+          points="80,317 193,313 307,309 420,306 533,300 647,294 760,288"/>
+        <circle cx="80" cy="317" r="6" fill="#10B981"/>
+        <circle cx="193" cy="313" r="6" fill="#10B981"/>
+        <circle cx="307" cy="309" r="6" fill="#10B981"/>
+        <circle cx="420" cy="306" r="6" fill="#10B981"/>
+        <circle cx="533" cy="300" r="6" fill="#10B981"/>
+        <circle cx="647" cy="294" r="6" fill="#10B981"/>
+        <circle cx="760" cy="288" r="6" fill="#10B981"/>
+        
+        <!-- Legend -->
+        <rect x="520" y="20" width="260" height="90" rx="8" fill="#1e293b" stroke="#334155"/>
+        <line x1="535" y1="40" x2="565" y2="40" stroke="#EF4444" stroke-width="3"/>
+        <text x="575" y="44" fill="#fff" font-size="12">Download Volume (12.5x growth)</text>
+        <line x1="535" y1="60" x2="565" y2="60" stroke="#F59E0B" stroke-width="3"/>
+        <text x="575" y="64" fill="#fff" font-size="12">Security Expectations (7x growth)</text>
+        <line x1="535" y1="80" x2="565" y2="80" stroke="#10B981" stroke-width="3"/>
+        <text x="575" y="84" fill="#fff" font-size="12">Registry Staffing (1.45x growth)</text>
+      </svg>
+      
+      <div class="grid grid-cols-3 gap-4 mt-8">
+        <div class="bg-red-900/30 rounded-xl p-6 border border-red-800 text-center">
+          <div class="text-5xl font-bold text-red-400">12.5x</div>
+          <div class="text-white font-medium mt-2">Download Growth</div>
+          <div class="text-slate-400 text-sm">2019 → 2025</div>
+        </div>
+        <div class="bg-amber-900/30 rounded-xl p-6 border border-amber-800 text-center">
+          <div class="text-5xl font-bold text-amber-400">7x</div>
+          <div class="text-white font-medium mt-2">Security Expectations</div>
+          <div class="text-slate-400 text-sm">Features demanded</div>
+        </div>
+        <div class="bg-green-900/30 rounded-xl p-6 border border-green-800 text-center">
+          <div class="text-5xl font-bold text-green-400">1.45x</div>
+          <div class="text-white font-medium mt-2">Staffing Growth</div>
+          <div class="text-slate-400 text-sm">Resources available</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Ecosystem Growth -->
+    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-blue-400">📈 Ecosystem Growth</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Package Count -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Package Count (Millions)</h3>
+          <svg viewBox="0 0 400 250" class="w-full h-auto">
+            <!-- Bars for 2019, 2022, 2025 -->
+            <rect x="30" y="180" width="80" height="60" fill="#3B82F6" rx="4"/>
+            <rect x="160" y="100" width="80" height="140" fill="#3B82F6" rx="4"/>
+            <rect x="290" y="30" width="80" height="210" fill="#3B82F6" rx="4"/>
+            <text x="70" y="245" fill="#94a3b8" font-size="12" text-anchor="middle">2019</text>
+            <text x="200" y="245" fill="#94a3b8" font-size="12" text-anchor="middle">2022</text>
+            <text x="330" y="245" fill="#94a3b8" font-size="12" text-anchor="middle">2025</text>
+            <text x="70" y="170" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">1.6M</text>
+            <text x="200" y="90" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">3.4M</text>
+            <text x="330" y="20" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">5.3M+</text>
+          </svg>
+        </div>
+        
+        <!-- Downloads -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Annual Downloads (Trillions)</h3>
+          <svg viewBox="0 0 400 250" class="w-full h-auto">
+            <rect x="30" y="200" width="80" height="40" fill="#10B981" rx="4"/>
+            <rect x="160" y="140" width="80" height="100" fill="#10B981" rx="4"/>
+            <rect x="290" y="40" width="80" height="200" fill="#10B981" rx="4"/>
+            <text x="70" y="245" fill="#94a3b8" font-size="12" text-anchor="middle">2019</text>
+            <text x="200" y="245" fill="#94a3b8" font-size="12" text-anchor="middle">2022</text>
+            <text x="330" y="245" fill="#94a3b8" font-size="12" text-anchor="middle">2025</text>
+            <text x="70" y="190" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">0.8T</text>
+            <text x="200" y="130" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">3.3T</text>
+            <text x="330" y="30" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold">8.1T+</text>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="mt-8 grid grid-cols-5 gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-400">3.4M</div>
+          <div class="text-sm text-slate-400">npm packages</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-400">720K</div>
+          <div class="text-sm text-slate-400">PyPI packages</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-amber-400">750K</div>
+          <div class="text-sm text-slate-400">Maven artifacts</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-purple-400">210K</div>
+          <div class="text-sm text-slate-400">Rust crates</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-400">200K</div>
+          <div class="text-sm text-slate-400">RubyGems</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Foundation Annual Budgets -->
+    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-purple-400">🏛️ Foundation Annual Budgets</h2>
+      <p class="text-slate-400 mb-6">Total organizational budgets for the nonprofits operating community package registries (most recent available data)</p>
+      
+      <!-- Budget Horizontal Bar Chart -->
+      <svg viewBox="0 0 800 300" class="w-full h-auto mb-8">
+        <!-- Y-axis labels (Foundation names) -->
+        <text x="180" y="60" fill="#fff" font-size="16" text-anchor="end" font-weight="500">Python Software Foundation</text>
+        <text x="180" y="140" fill="#fff" font-size="16" text-anchor="end" font-weight="500">Ruby Central</text>
+        <text x="180" y="220" fill="#fff" font-size="16" text-anchor="end" font-weight="500">Rust Foundation</text>
+        
+        <!-- Horizontal bars -->
+        <!-- PSF: $4.5M -->
+        <rect x="200" y="40" width="500" height="40" fill="#3B82F6" rx="6"/>
+        <text x="710" y="66" fill="#3B82F6" font-size="18" font-weight="bold">$4.5M</text>
+        <text x="210" y="66" fill="#fff" font-size="12">2024 (revenue $4.4M, expenses $5.9M)</text>
+        
+        <!-- Ruby Central: $2.1M -->
+        <rect x="200" y="120" width="233" height="40" fill="#EF4444" rx="6"/>
+        <text x="443" y="146" fill="#EF4444" font-size="18" font-weight="bold">$2.1M</text>
+        <text x="210" y="146" fill="#fff" font-size="12">2023 revenue</text>
+        
+        <!-- Rust Foundation: $1.9M -->
+        <rect x="200" y="200" width="211" height="40" fill="#F97316" rx="6"/>
+        <text x="421" y="226" fill="#F97316" font-size="18" font-weight="bold">$1.9M</text>
+        <text x="210" y="226" fill="#fff" font-size="12">2022 budget</text>
+        
+        <!-- Scale markers -->
+        <line x1="200" y1="260" x2="200" y2="270" stroke="#64748b" stroke-width="2"/>
+        <text x="200" y="285" fill="#94a3b8" font-size="11" text-anchor="middle">$0</text>
+        <line x1="311" y1="260" x2="311" y2="270" stroke="#64748b" stroke-width="2"/>
+        <text x="311" y="285" fill="#94a3b8" font-size="11" text-anchor="middle">$1M</text>
+        <line x1="422" y1="260" x2="422" y2="270" stroke="#64748b" stroke-width="2"/>
+        <text x="422" y="285" fill="#94a3b8" font-size="11" text-anchor="middle">$2M</text>
+        <line x1="533" y1="260" x2="533" y2="270" stroke="#64748b" stroke-width="2"/>
+        <text x="533" y="285" fill="#94a3b8" font-size="11" text-anchor="middle">$3M</text>
+        <line x1="644" y1="260" x2="644" y2="270" stroke="#64748b" stroke-width="2"/>
+        <text x="644" y="285" fill="#94a3b8" font-size="11" text-anchor="middle">$4M</text>
+        <line x1="755" y1="260" x2="755" y2="270" stroke="#64748b" stroke-width="2"/>
+        <text x="755" y="285" fill="#94a3b8" font-size="11" text-anchor="middle">$5M</text>
+      </svg>
+      
+      <!-- Budget Breakdown Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-blue-900/20 rounded-xl p-5 border border-blue-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl">🐍</span>
+            <span class="font-bold text-blue-400">Python Software Foundation</span>
+          </div>
+          <div class="text-2xl font-bold text-white mb-2">~$4.5M</div>
+          <div class="text-sm text-slate-300 space-y-1">
+            <div>• PyCon US: ~$1.8M (40%)</div>
+            <div>• Grants Program: ~$677K (15%)</div>
+            <div>• <strong class="text-blue-300">PyPI Infrastructure: ~$286K (6%)</strong></div>
+            <div>• Staff & Operations: ~$1.7M</div>
+          </div>
+          <div class="mt-3 text-xs text-red-400">
+            ⚠️ 2024: Net loss of $1.46M; grants paused
+          </div>
+        </div>
+        
+        <div class="bg-red-900/20 rounded-xl p-5 border border-red-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl">💎</span>
+            <span class="font-bold text-red-400">Ruby Central</span>
+          </div>
+          <div class="text-2xl font-bold text-white mb-2">~$2.1M</div>
+          <div class="text-sm text-slate-300 space-y-1">
+            <div>• RubyConf & RailsConf (self-sustaining)</div>
+            <div>• Alpha-Omega grant: $250K</div>
+            <div>• <strong class="text-red-300">Open Source: 70-75% of sponsor funds</strong></div>
+            <div>• STA funding for security work</div>
+          </div>
+          <div class="mt-3 text-xs text-slate-400">
+            Merged with Ruby Together in 2022
+          </div>
+        </div>
+        
+        <div class="bg-orange-900/20 rounded-xl p-5 border border-orange-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-2xl">🦀</span>
+            <span class="font-bold text-orange-400">Rust Foundation</span>
+          </div>
+          <div class="text-2xl font-bold text-white mb-2">~$1.9M</div>
+          <div class="text-sm text-slate-300 space-y-1">
+            <div>• Platinum: Microsoft, Google, AWS, Huawei</div>
+            <div>• Security Initiative (Alpha-Omega): $430K</div>
+            <div>• <strong class="text-orange-300">$1M C++ Interoperability (Google)</strong></div>
+            <div>• Community Grants & Fellowships</div>
+          </div>
+          <div class="mt-3 text-xs text-green-400">
+            ✓ 75% CI cost reduction achieved for crates.io
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Insight Box -->
+      <div class="mt-6 bg-slate-700/30 rounded-xl p-5 border border-slate-600">
+        <h4 class="font-bold text-cyan-400 mb-2">📊 The Infrastructure Slice</h4>
+        <p class="text-slate-300 text-sm">
+          Across all three foundations, <strong class="text-white">package registry infrastructure represents only 6-15% of total budgets</strong>, 
+          despite serving billions of daily requests. The majority of spending goes to conferences, grants, and general operations. 
+          This creates a structural challenge: <em>registry infrastructure competes for funding against more visible community activities</em>.
+          Compare to corporate-backed registries: npm (~$5M+, Microsoft) and Maven Central (~$3.5M+, Sonatype).
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 4: Infrastructure Reality -->
+    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-green-400">💰 Registry Infrastructure Costs</h2>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-slate-600">
+              <th class="py-4 px-4 text-left">Registry</th>
+              <th class="py-4 px-4 text-left">FT Staff</th>
+              <th class="py-4 px-4 text-left">Annual Budget</th>
+              <th class="py-4 px-4 text-left">CDN Costs</th>
+              <th class="py-4 px-4 text-left">Daily Requests</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-700">
+              <td class="py-4 px-4 font-medium">PyPI</td>
+              <td class="py-4 px-4">~3</td>
+              <td class="py-4 px-4">~$286K (infra)</td>
+              <td class="py-4 px-4 text-green-400">Donated (Fastly)</td>
+              <td class="py-4 px-4 text-blue-400">1.9 billion</td>
+            </tr>
+            <tr class="border-b border-slate-700">
+              <td class="py-4 px-4 font-medium">RubyGems</td>
+              <td class="py-4 px-4">~1</td>
+              <td class="py-4 px-4">~$240K/year</td>
+              <td class="py-4 px-4 text-green-400">Donated (Fastly)</td>
+              <td class="py-4 px-4 text-blue-400">2 billion</td>
+            </tr>
+            <tr class="border-b border-slate-700">
+              <td class="py-4 px-4 font-medium">crates.io</td>
+              <td class="py-4 px-4">~2</td>
+              <td class="py-4 px-4">~$150K/year</td>
+              <td class="py-4 px-4 text-green-400">Donated (AWS/Fastly)</td>
+              <td class="py-4 px-4 text-blue-400">500 million</td>
+            </tr>
+            <tr class="border-b border-slate-700">
+              <td class="py-4 px-4 font-medium">npm</td>
+              <td class="py-4 px-4">~25</td>
+              <td class="py-4 px-4">~$5M+ (est.)</td>
+              <td class="py-4 px-4 text-amber-400">Microsoft-backed</td>
+              <td class="py-4 px-4 text-blue-400">12 billion</td>
+            </tr>
+            <tr class="border-b border-slate-700">
+              <td class="py-4 px-4 font-medium">Maven Central</td>
+              <td class="py-4 px-4">~15</td>
+              <td class="py-4 px-4">~$3.5M+ (est.)</td>
+              <td class="py-4 px-4 text-amber-400">Sonatype-backed</td>
+              <td class="py-4 px-4 text-blue-400">4 billion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="mt-8 bg-amber-900/20 rounded-xl p-6 border border-amber-700">
+        <h3 class="text-xl font-semibold mb-4 text-amber-400">⚠️ The Hidden Cost Reality</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-medium text-white mb-2">What's Donated (Unreported Value)</h4>
+            <ul class="text-slate-300 space-y-2 text-sm">
+              <li>• <strong>Fastly CDN:</strong> ~$500K+/month for PyPI alone at retail</li>
+              <li>• <strong>AWS Credits:</strong> Millions in compute/storage</li>
+              <li>• <strong>Volunteer Hours:</strong> Thousands of unpaid hours/year</li>
+              <li>• <strong>Google BigQuery:</strong> PyPI download analytics</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium text-white mb-2">What's Underfunded</h4>
+            <ul class="text-slate-300 space-y-2 text-sm">
+              <li>• 24/7 on-call rotation (most have none or limited)</li>
+              <li>• Dedicated security teams</li>
+              <li>• Malware scanning infrastructure</li>
+              <li>• User support staff</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Security Expectations -->
+    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-purple-400">🔒 Rising Security Expectations</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-green-400">Now Expected (2024-2025)</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <span class="text-green-400 text-xl">✓</span>
+              <span>Mandatory 2FA for publishers</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-400 text-xl">✓</span>
+              <span>Trusted Publishing (OIDC)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-400 text-xl">✓</span>
+              <span>Automated malware scanning</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-400 text-xl">✓</span>
+              <span>Provenance attestations</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-400 text-xl">✓</span>
+              <span>SBOM generation support</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-amber-400">Coming (Under Development)</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <span class="text-amber-400 text-xl">◐</span>
+              <span>TUF-based package signing</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-amber-400 text-xl">◐</span>
+              <span>Reproducible builds verification</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-amber-400 text-xl">◐</span>
+              <span>Dependency review enforcement</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-amber-400 text-xl">◐</span>
+              <span>Real-time threat intelligence</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-amber-400 text-xl">◐</span>
+              <span>AI-powered malware detection</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold mb-4">Trusted Publishing Adoption</h3>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="bg-slate-700/50 rounded-xl p-4 text-center">
+            <div class="text-green-400 font-medium">PyPI</div>
+            <div class="text-3xl font-bold mt-2">20%</div>
+            <div class="text-xs text-slate-400">50K+ projects</div>
+          </div>
+          <div class="bg-slate-700/50 rounded-xl p-4 text-center">
+            <div class="text-red-400 font-medium">RubyGems</div>
+            <div class="text-3xl font-bold mt-2">5%</div>
+            <div class="text-xs text-slate-400">8K projects</div>
+          </div>
+          <div class="bg-slate-700/50 rounded-xl p-4 text-center">
+            <div class="text-purple-400 font-medium">crates.io</div>
+            <div class="text-3xl font-bold mt-2">8%</div>
+            <div class="text-xs text-slate-400">5K projects</div>
+          </div>
+          <div class="bg-slate-700/50 rounded-xl p-4 text-center">
+            <div class="text-blue-400 font-medium">npm</div>
+            <div class="text-3xl font-bold mt-2">0.5%</div>
+            <div class="text-xs text-slate-400">Just launched</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Malware Trends -->
+    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-red-400">⚠️ Malware Explosion</h2>
+      
+      <svg viewBox="0 0 800 300" class="w-full h-auto mb-8">
+        <!-- Y-axis -->
+        <text x="60" y="30" fill="#94a3b8" font-size="12" text-anchor="end">800K</text>
+        <text x="60" y="90" fill="#94a3b8" font-size="12" text-anchor="end">600K</text>
+        <text x="60" y="150" fill="#94a3b8" font-size="12" text-anchor="end">400K</text>
+        <text x="60" y="210" fill="#94a3b8" font-size="12" text-anchor="end">200K</text>
+        <text x="60" y="270" fill="#94a3b8" font-size="12" text-anchor="end">0</text>
+        
+        <!-- Area fill -->
+        <path d="M 100,268 L 217,264 L 333,252 L 450,220 L 567,160 L 683,50 L 683,270 L 100,270 Z" fill="#EF4444" fill-opacity="0.3"/>
+        
+        <!-- Line -->
+        <polyline fill="none" stroke="#EF4444" stroke-width="3"
+          points="100,268 217,264 333,252 450,220 567,160 683,50"/>
+        
+        <!-- Points with labels -->
+        <circle cx="100" cy="268" r="5" fill="#EF4444"/>
+        <circle cx="217" cy="264" r="5" fill="#EF4444"/>
+        <circle cx="333" cy="252" r="5" fill="#EF4444"/>
+        <circle cx="450" cy="220" r="5" fill="#EF4444"/>
+        <circle cx="567" cy="160" r="5" fill="#EF4444"/>
+        <circle cx="683" cy="50" r="5" fill="#EF4444"/>
+        
+        <text x="100" y="290" fill="#94a3b8" font-size="12" text-anchor="middle">2019</text>
+        <text x="217" y="290" fill="#94a3b8" font-size="12" text-anchor="middle">2020</text>
+        <text x="333" y="290" fill="#94a3b8" font-size="12" text-anchor="middle">2021</text>
+        <text x="450" y="290" fill="#94a3b8" font-size="12" text-anchor="middle">2022</text>
+        <text x="567" y="290" fill="#94a3b8" font-size="12" text-anchor="middle">2023</text>
+        <text x="683" y="290" fill="#94a3b8" font-size="12" text-anchor="middle">2024</text>
+        
+        <text x="100" y="255" fill="#fff" font-size="10" text-anchor="middle">5K</text>
+        <text x="217" y="251" fill="#fff" font-size="10" text-anchor="middle">20K</text>
+        <text x="333" y="239" fill="#fff" font-size="10" text-anchor="middle">65K</text>
+        <text x="450" y="207" fill="#fff" font-size="10" text-anchor="middle">150K</text>
+        <text x="567" y="147" fill="#fff" font-size="10" text-anchor="middle">350K</text>
+        <text x="683" y="37" fill="#fff" font-size="10" text-anchor="middle">778K+</text>
+        
+        <text x="750" y="30" fill="#EF4444" font-size="14" font-weight="bold">Cumulative</text>
+        <text x="750" y="50" fill="#EF4444" font-size="14" font-weight="bold">Malicious</text>
+        <text x="750" y="70" fill="#EF4444" font-size="14" font-weight="bold">Packages</text>
+      </svg>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-red-900/30 rounded-xl p-4 border border-red-800 text-center">
+          <div class="text-3xl font-bold text-red-400">156%</div>
+          <div class="text-sm text-slate-300">YoY Increase</div>
+        </div>
+        <div class="bg-red-900/30 rounded-xl p-4 border border-red-800 text-center">
+          <div class="text-3xl font-bold text-red-400">98.5%</div>
+          <div class="text-sm text-slate-300">npm Share</div>
+        </div>
+        <div class="bg-red-900/30 rounded-xl p-4 border border-red-800 text-center">
+          <div class="text-3xl font-bold text-red-400">512K</div>
+          <div class="text-sm text-slate-300">Detected in 2024</div>
+        </div>
+        <div class="bg-red-900/30 rounded-xl p-4 border border-red-800 text-center">
+          <div class="text-3xl font-bold text-red-400">67%</div>
+          <div class="text-sm text-slate-300">Target Gov/Fin</div>
+        </div>
+      </div>
+
+      <div class="bg-red-900/20 rounded-xl p-6 border border-red-700">
+        <h3 class="text-xl font-semibold mb-4 text-red-400">Notable 2024 Incidents</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="space-y-3">
+            <div class="border-l-4 border-red-500 pl-4">
+              <div class="font-medium text-white">XZ Utils Backdoor</div>
+              <div class="text-sm text-slate-400">Nation-state attack, multi-year maintainer infiltration</div>
+            </div>
+            <div class="border-l-4 border-amber-500 pl-4">
+              <div class="font-medium text-white">LUMMA Malware (PyPI)</div>
+              <div class="text-sm text-slate-400">Russian-linked, connected to Snowflake breach</div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <div class="font-medium text-white">eslint-config-prettier (npm)</div>
+              <div class="text-sm text-slate-400">Phishing attack on maintainer, 14K+ dependents</div>
+            </div>
+            <div class="border-l-4 border-purple-500 pl-4">
+              <div class="font-medium text-white">Tea Protocol Spam</div>
+              <div class="text-sm text-slate-400">Thousands of spam packages flooding npm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-8 border border-blue-700 text-center">
+      <h2 class="text-3xl font-bold mb-4">The Sustainability Gap is Growing</h2>
+      <p class="text-slate-300 text-lg mb-6 max-w-3xl mx-auto">
+        Package registries are critical infrastructure serving trillions of downloads annually, 
+        yet most operate with minimal staff and rely heavily on donated services. 
+        As security expectations increase, this gap becomes untenable.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="bg-white/10 rounded-lg px-6 py-3">
+          <div class="text-sm text-slate-400">Investment Needed</div>
+          <div class="text-xl font-bold">Sustainable Funding</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-6 py-3">
+          <div class="text-sm text-slate-400">For</div>
+          <div class="text-xl font-bold">Security Features</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-6 py-3">
+          <div class="text-sm text-slate-400">Supporting</div>
+          <div class="text-xl font-bold">Critical Infrastructure</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-12 text-center text-slate-500 text-sm">
+      <p>Data compiled from Sonatype State of Software Supply Chain 2024, PSF Annual Reports, Ruby Central,</p>
+      <p>Rust Foundation Technology Report, PyPI Stats, npm registry data, and Socket.dev research</p>
+      <p class="mt-2">Prepared for Alpha-Omega and package manager sustainability discussions • January 2026</p>
+    </div>
+  </div>
+</body>
+</html>
