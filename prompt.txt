@@ -1,0 +1,4 @@
+I'd like to create some visuals to compare a few trends:
+1. The growth of open source package ecosystems across various dimensions (number of packages, number of versions, updates, downloads, bandwidth, and percentage of malware)
+2. The underlying costs associated with operating the infrastructure and services of package registry services like PyPI, Crates, Rubygems, Maven Central, etc. This includes the staffing and infrastructure costs 
+3. The increased expectations of security-related features like malware scanning, Trusted Publishing, code signing, etc.
