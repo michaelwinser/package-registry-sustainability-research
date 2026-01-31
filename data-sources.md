@@ -279,6 +279,52 @@ This document provides sources and methodology for all data points used in the P
 
 ---
 
+## 8.5. OpenSSF Security Maturity Framework
+
+The OpenSSF "Principles for Package Repository Security" provides a standardized framework for assessing registry security maturity across four tracks with four levels each.
+
+### Framework Structure
+
+| Track | Description |
+|-------|-------------|
+| Authentication | User identity verification (MFA, SSO, account recovery) |
+| Authorization | Access control (API tokens, scoped permissions, Trusted Publishing) |
+| General Capabilities | Security features (malware scanning, vulnerability warnings, provenance) |
+| CLI Tooling | Client-side security (signature verification, lockfiles, SBOMs) |
+
+### Maturity Levels
+
+| Level | Name | Key Requirements |
+|-------|------|------------------|
+| 0 | None | No security requirements |
+| 1 | Basic | MFA support, security reporting, basic account recovery |
+| 2 | Moderate | MFA for critical packages, vulnerability warnings, namespace protection |
+| 3 | Advanced | MFA required for all, build provenance, OIDC Trusted Publishing, SLSA attestations |
+
+### Registry Assessment (January 2025)
+
+| Registry | Authentication | Authorization | General | CLI | Overall |
+|----------|---------------|---------------|---------|-----|---------|
+| PyPI | 3 (mandatory 2FA) | 2 | 2 | 2 | 2.3 |
+| npm | 3 (GitHub SSO) | 2 | 2 | 2 | 2.3 |
+| RubyGems | 2 (MFA for critical) | 2 | 2 | 1 | 1.8 |
+| Crates.io | 2 | 2 | 2 | 2 | 2.0 |
+| Maven Central | 1 (optional) | 2 | 2 | 3 (GPG required) | 2.0 |
+
+### Key Gaps to Level 3
+
+- **Real-time ML/AI malware detection**: No registry has 24/7 automated scanning
+- **Build reproducibility verification**: Requires rebuild infrastructure
+- **Full SLSA attestation support**: Only partial adoption (~5% on PyPI)
+- **Universal 2FA enforcement**: Only PyPI and npm (via GitHub) have achieved this
+
+- **Sources**:
+  - [OpenSSF Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security.html)
+  - [OpenSSF Securing Software Repositories Working Group](https://github.com/ossf/wg-securing-software-repos)
+  - [SLSA Framework](https://slsa.dev/)
+
+---
+
 ## 9. Unfunded Security Work
 
 ### Security Capabilities NOT Being Funded
